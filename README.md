@@ -2,7 +2,7 @@
 
 Este homelab foi criado para eu perceber, de forma prática, como é o trabalho num SOC. Simula o fluxo de um analista: o Sysmon regista a atividade do Windows, o Wazuh recolhe e analisa esses eventos para gerar alertas, e o TheHive serve para investigar e documentar casos. Gero atividade suspeita no meu próprio computador para estudar os alertas e treinar a triagem, tudo isolado em contentores Docker.
 
- 
+ ![Arquitetura do SOC Homelab](assets/Imagem5.png)
 
 ## 1. Sysmon
 
@@ -24,7 +24,8 @@ Como decide o que regista
 •	Nas ligações de rede (NetworkConnect), usa include: só regista as de programas ou portas interessantes.
 •	O objetivo é filtrar o ruído no próprio computador, para os eventos úteis se verem melhor.
 
-###Verificação 
+### Verificação 
+![Eventos do Sysmon no Event Viewer](assets/Imagem1.png)
  
 
 
@@ -80,6 +81,8 @@ O indexer demora alguns minutos a ficar pronto. Enquanto isso, o dashboard mostr
 
 No dashboard, o agente aparece como **Active** (Agents Summary).
 
+![Dashboard do Wazuh](assets/Imagem2.png)
+
  
 
 ## 3. TheHive
@@ -122,6 +125,7 @@ Nota: por opção durante a montagem, o ficheiro ficou em System32, mas o ideal 
 A ligação é manual , abrimos o TheHive localmente para estudarmos o caso.
 ### Verificação
 Teste
+![Caso de teste no TheHive](assets/Imagem3.png)
  
 
 
@@ -159,6 +163,6 @@ No Windows, o Docker corre os contentores por cima do WSL2, por isso o Docker De
 O lab pesa: são 6 contentores. Por isso arranquei o Wazuh e o TheHive em separado.
 
 ### Verificação
-
+![Contentores Docker a correr](assets/Imagem4.png)
  
 
