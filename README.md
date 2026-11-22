@@ -124,7 +124,7 @@ Nota: por opção durante a montagem, o ficheiro ficou em System32, mas o ideal 
 
 A ligação é manual , abrimos o TheHive localmente para estudarmos o caso.
 ### Verificação
-Teste
+
 ![Caso de teste no TheHive](assets/Imagem3.png)
  
 
