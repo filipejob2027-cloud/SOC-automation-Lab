@@ -10,9 +10,7 @@ net localgroup Administradores labtest /add
 ```
 
 ### Alerta
-
-## Casos de Triagem
-- [Caso 01 — Conta adicionada ao grupo de Administradores (Wazuh Rule 60154)](casos/01-administradores-labtest.md)
+![Alerta 60154 no Wazuh](../assets/Wazuh1.png)
 
 | Campo | Valor |
 |---|---|
