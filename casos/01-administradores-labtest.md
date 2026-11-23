@@ -11,7 +11,7 @@ net localgroup Administradores labtest /add
 
 ### Alerta
 
-![Alerta 60154 no Wazuh](img/wazuh-alerta-60154.png)
+![Alerta 60154 no Wazuh](assets/Wazuh1.png)
 
 | Campo | Valor |
 |---|---|
@@ -38,10 +38,10 @@ net localgroup Administradores labtest /add
 
 ### Caso no TheHive
 
-<Abri um caso com ... e registei ...>
+Abri o caso **#2 — Conta adicionada ao grupo de Administradores** no TheHive com severidade **High**, `TLP:AMBER` e as tags `wazuh` e `T1484`. Registei os três observáveis principais da triagem (`win-lab`, `labtest` e o SID `S-1-5-21-1105318813-943618807-4205460125-1018`) e executei as duas tarefas de resposta (validar a autorização da atividade e remover a conta de teste). Encerrei o caso como **True positive** sem impacto real no sistema, documentando que se tratou de uma simulação controlada de laboratório.
 
-![Caso no TheHive](img/thehive-caso-labtest.png)
+![Caso no TheHive](../assets/Thehive.png)
 
 ### O que mostra este exercício
 
-<O que concluíste? O que aprendeste sobre alertas e níveis?>
+Este exercício demonstra o fluxo completo de triagem de um analista SOC L1: partir de uma ação no endpoint, analisar o evento do Windows (`4732`) e o alerta gerado no Wazuh (`regra 60154`, nível `12`), avaliar o contexto para confirmar se a atividade era autorizada e gerir todo o ciclo de investigação, remediação e encerramento no TheHive. Mostra também que um alerta de severidade elevada exige investigação e contexto antes de se declarar um incidente real.
